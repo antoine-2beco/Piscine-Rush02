@@ -18,8 +18,9 @@ all:		$(OBJS) $(NAME)
 				@echo "Compiling OK!"
 
 $(NAME):	$(OBJS)
-				@echo "Compiling $@"
-				@cc $(CFLAGS) $^ -o $@ 
+				@echo "Creating executable $@"
+				@cc $(CFLAGS) $^ -o $@
+				@echo "Job's done!"
 clean:
 				@echo "Cleaning objects..."
 				@rm -f $(OBJS) $(BONUS_OBJS)
