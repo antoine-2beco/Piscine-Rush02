@@ -6,7 +6,7 @@
 /*   By: lomajeru <lomajeru@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/23 13:47:05 by lomajeru          #+#    #+#             */
-/*   Updated: 2023/09/24 19:27:11 by lomajeru         ###   ########.fr       */
+/*   Updated: 2023/09/24 19:30:09 by lomajeru         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,6 @@ void				ft_putchar(char c);
 int					ft_power(int nb, int power);
 long long			ft_atoi_check(char *str);
 void				ft_putstr(char *str);
-
 
 //ft_error.c
 int					ft_error(char *buff);
