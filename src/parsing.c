@@ -6,7 +6,7 @@
 /*   By: lomajeru <lomajeru@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/23 14:32:17 by lomajeru          #+#    #+#             */
-/*   Updated: 2023/09/24 20:36:00 by lomajeru         ###   ########.fr       */
+/*   Updated: 2023/09/24 22:26:05 by lomajeru         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@ int	nb_lines(char *buff)
 	count = 0;
 	while (buff[i])
 	{
+		while (buff[i] == '\n')
+			i++;
 		while (buff[i] && buff[i] != '\n')
 			i++;
 		if (buff[i] == '\n')
@@ -66,7 +68,6 @@ t_dict	*fill_dict(char *buff, int i, int k)
 	t_dict	*dict;
 
 	dict = malloc((nb_lines(buff) + 1) * sizeof(t_dict));
-	dict[0].len = nb_lines(buff);
 	while (buff[i])
 	{
 		while (buff[i] == '\n')
@@ -87,6 +88,7 @@ t_dict	*fill_dict(char *buff, int i, int k)
 			i++;
 		k++;
 	}
+	dict[0].len = k;
 	return (dict);
 }
 

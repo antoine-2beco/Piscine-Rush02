@@ -6,7 +6,7 @@
 /*   By: lomajeru <lomajeru@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/23 14:05:02 by lomajeru          #+#    #+#             */
-/*   Updated: 2023/09/24 21:15:15 by lomajeru         ###   ########.fr       */
+/*   Updated: 2023/09/24 21:24:20 by lomajeru         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,11 +20,11 @@ void	ft_putstr(char *str)
 		write(1, str++, 1);
 }
 
-int	ft_atoi_rush(char *str)
+long long	ft_atoi_rush(char *str)
 {
-	int	i;
-	int	sign;
-	int	nb;
+	int			i;
+	long long	sign;
+	long long	nb;
 
 	i = 0;
 	sign = 1;
