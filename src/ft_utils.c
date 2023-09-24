@@ -6,7 +6,7 @@
 /*   By: lomajeru <lomajeru@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/23 14:05:02 by lomajeru          #+#    #+#             */
-/*   Updated: 2023/09/24 20:24:56 by lomajeru         ###   ########.fr       */
+/*   Updated: 2023/09/24 21:15:15 by lomajeru         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,7 @@ long long	ft_atoi_check(char *str)
 
 	i = 0;
 	sign = 1;
-	if (str[i] == '-' || str[i] == '+')
+	while (str[i] == '-' || str[i] == '+')
 	{
 		if (str[i] == '-')
 			sign *= -1;
@@ -65,7 +65,7 @@ long long	ft_atoi_check(char *str)
 		nb = nb * 10 + str[i] - '0';
 		i++;
 	}
-	if (i == 0)
+	if (i == 0 || i != ft_strlen(str))
 		return (-1);
 	return (nb * sign);
 }
