@@ -3,7 +3,7 @@
 /*                                                        :::      ::::::::   */
 /*   ft_error.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lomajeru <lomajeru@student.42.fr>          +#+  +:+       +#+        */
+/*   By: lomajeru <lomajeru@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/24 13:10:16 by lomajeru          #+#    #+#             */
 /*   Updated: 2023/09/24 19:39:51 by hle-roi          ###   ########.fr       */

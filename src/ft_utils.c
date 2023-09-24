@@ -3,7 +3,7 @@
 /*                                                        :::      ::::::::   */
 /*   ft_utils.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lomajeru <lomajeru@student.42.fr>          +#+  +:+       +#+        */
+/*   By: lomajeru <lomajeru@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/23 14:05:02 by lomajeru          #+#    #+#             */
 /*   Updated: 2023/09/24 19:35:43 by lomajeru         ###   ########.fr       */

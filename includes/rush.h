@@ -3,7 +3,7 @@
 /*                                                        :::      ::::::::   */
 /*   rush.h                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lomajeru <lomajeru@student.42.fr>          +#+  +:+       +#+        */
+/*   By: lomajeru <lomajeru@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/23 13:47:05 by lomajeru          #+#    #+#             */
 /*   Updated: 2023/09/24 19:30:09 by lomajeru         ###   ########.fr       */
