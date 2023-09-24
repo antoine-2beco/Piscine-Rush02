@@ -6,7 +6,7 @@
 /*   By: lomajeru <lomajeru@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/23 14:05:26 by hle-roi           #+#    #+#             */
-/*   Updated: 2023/09/24 19:27:29 by lomajeru         ###   ########.fr       */
+/*   Updated: 2023/09/24 19:34:41 by lomajeru         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,6 +66,9 @@ void    ft_print_multiple(long long nbr, t_dict *dict)
 void    ft_print_nbr(long long nbr, t_dict *dict)
 {
     long long  curr_num;
+
+	if (nbr == 0)
+		ft_putstr(find_in_dict(nbr, dict));
     curr_num = ft_curr_len(nbr);
     while (curr_num >= 1000)
     {
