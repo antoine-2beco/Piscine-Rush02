@@ -6,7 +6,7 @@
 /*   By: lomajeru <lomajeru@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/23 14:32:17 by lomajeru          #+#    #+#             */
-/*   Updated: 2023/09/24 16:45:27 by lomajeru         ###   ########.fr       */
+/*   Updated: 2023/09/24 18:18:22 by lomajeru         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,31 +23,27 @@ int	nb_lines(char *buff)
 	{
 		while (buff[i] && buff[i] != '\n')
 			i++;
-		if (!buff[i] || buff[i] == '\n')
+		if (buff[i] == '\n')
 		{
 			count++;
-			while (buff[i] && buff[i] == '\n')
+			while (buff[i] == '\n')
 				i++;
 		}
 	}
 	return (count);
 }
 
-char	*get_value(char *buff)
+char	*get_value(char *buff, int i, int k)
 {
-	int		i;
-	int		k;
 	char	*tmp;
 	char	*value;
 
-	i = 0;
 	while (buff[i] && buff[i] != '\n')
 		i++;
 	tmp = malloc(i + 1);
 	if (!tmp)
 		return (NULL);
 	i = 0;
-	k = 0;
 	while (buff[i] && buff[i] != '\n')
 	{
 		if (i != 0)
@@ -65,32 +61,27 @@ char	*get_value(char *buff)
 	return (value);
 }
 
-t_dict	*fill_dict(char *buff)
+t_dict	*fill_dict(char *buff, int i, int k)
 {
-	int		i;
-	int		k;
 	t_dict	*dict;
 
-	i = 0;
-	k = 0;
 	dict = malloc((nb_lines(buff) + 1) * sizeof(t_dict));
+	dict[0].len = nb_lines(buff);
 	while (buff[i])
 	{
+		while (buff[i] == '\n')
+			i++;
 		dict[k].nb = ft_atoi_rush(buff + i);
-		if (dict[k].nb < 0)
-			return (ft_free_dict(dict, k), ft_error(buff), NULL);
 		while (buff[i] >= '0' && buff[i] <= '9')
 			i++;
 		while (buff[i] == ' ')
 			i++;
 		if (buff[i++] != ':')
 			return (ft_free_dict(dict, k), ft_error(buff), NULL);
-		dict[k].value = get_value(buff + i);
-		if (!dict[k].value)
+		dict[k].value = get_value(buff + i, 0, 0);
+		if (!dict[k].value || dict[k].nb < 0)
 			return (ft_free_dict(dict, k), ft_error(buff), NULL);
 		while (buff[i] && buff[i] != '\n')
-			i++;
-		while (buff[i] == '\n')
 			i++;
 		k++;
 	}
@@ -113,10 +104,12 @@ t_dict	*parsing(char *file_name)
 	while (read(fd, &c, 1))
 		len_file++;
 	close(fd);
-	buff = malloc(len_file);
+	buff = malloc(len_file + 1);
 	if (!buff)
 		return (ft_error(NULL), NULL);
 	fd = open(file_name, O_RDONLY);
 	read(fd, buff, len_file);
-	return (fill_dict(buff));
+	buff[len_file] = '\0';
+	close(fd);
+	return (fill_dict(buff, 0, 0));
 }

@@ -6,7 +6,7 @@
 /*   By: lomajeru <lomajeru@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/24 12:57:26 by lomajeru          #+#    #+#             */
-/*   Updated: 2023/09/24 16:54:21 by lomajeru         ###   ########.fr       */
+/*   Updated: 2023/09/24 17:27:06 by lomajeru         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ int	main(int ac, char **av)
 		dict = parsing("numbers.dict");
 		if (!dict)
 			return (1);
-		num_spell(av[1], dict);
+		//num_spell(av[1], dict);
 	}
 	if (ac == 3)
 	{
@@ -32,7 +32,7 @@ int	main(int ac, char **av)
 		dict = parsing(av[1]);
 		if (!dict)
 			return (2);
-		num_spell(av[2], dict);
+		//num_spell(av[2], dict);
 	}
 	write(1, "\n", 1);
 }
