@@ -18,7 +18,7 @@ all:		$(OBJS) $(NAME)
 				@echo "Compiling OK!"
 
 $(NAME):	$(OBJS)
-				@echo "compiling $<"
+				@echo "Compiling $@"
 				@cc $(CFLAGS) $^ -o $@ 
 clean:
 				@echo "Cleaning objects..."
