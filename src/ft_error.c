@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_error.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lomajeru <lomajeru@student.s19.be>         +#+  +:+       +#+        */
+/*   By: lomajeru <lomajeru@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/24 13:10:16 by lomajeru          #+#    #+#             */
-/*   Updated: 2023/09/24 19:39:51 by hle-roi          ###   ########.fr       */
+/*   Updated: 2023/09/24 20:33:31 by lomajeru         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,18 +22,7 @@ int	ft_error(char *buff)
 
 void	ft_free_dict(t_dict *dict, int k)
 {
-	if (k == 0)
-	{
-		while (k < dict[0].len)
-		{
-			dict[k].value = NULL;
-			free(dict[k++].value);
-		}
-	}
-	else
-	{
-		while (k-- >= 0)
-			free(dict[k].value);
-		free(dict);
-	}
+	while (k--)
+		free(dict[k].value);
+	free(dict);
 }
