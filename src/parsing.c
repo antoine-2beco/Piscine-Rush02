@@ -6,7 +6,7 @@
 /*   By: lomajeru <lomajeru@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/23 14:32:17 by lomajeru          #+#    #+#             */
-/*   Updated: 2023/09/24 22:26:05 by lomajeru         ###   ########.fr       */
+/*   Updated: 2023/09/24 22:46:53 by lomajeru         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ char	*get_value(char *buff, int i, int k)
 	while (buff[i] && buff[i] != '\n')
 		i++;
 	tmp = malloc(i + 1);
-	if (!tmp)
+	if (!tmp || buff[0] == '\n' || buff[0] == '\0')
 		return (NULL);
 	i = 0;
 	while (buff[i] && buff[i] != '\n')
