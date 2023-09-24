@@ -1,6 +1,6 @@
 NAME		=	rush-02
 
-SRCS		=	src/ft_utils.c src/parsing.c src/rush02.c src/ft_error.c src/convert_num.c
+SRCS		=	src/ft_utils.c src/ft_utils2.c src/parsing.c src/rush02.c src/ft_error.c src/convert_num.c
 
 OBJS		=	$(SRCS:c=o)
 
