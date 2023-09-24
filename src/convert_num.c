@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   convert_num.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lomajeru <lomajeru@student.s19.be>         +#+  +:+       +#+        */
+/*   By: lomajeru <lomajeru@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/23 14:05:26 by lomajeru          #+#    #+#             */
-/*   Updated: 2023/09/24 19:43:35 by hle-roi          ###   ########.fr       */
+/*   Updated: 2023/09/24 20:19:14 by lomajeru         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,4 +84,5 @@ void	ft_print_nbr(long long nbr, t_dict *dict)
 		curr_num = curr_num / 1000;
 	}
 	ft_print_multiple(nbr, dict);
+	write(1, "\n", 1);
 }
