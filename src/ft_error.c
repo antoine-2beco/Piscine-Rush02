@@ -6,7 +6,7 @@
 /*   By: lomajeru <lomajeru@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/24 13:10:16 by lomajeru          #+#    #+#             */
-/*   Updated: 2023/09/24 18:06:41 by lomajeru         ###   ########.fr       */
+/*   Updated: 2023/09/24 19:18:21 by lomajeru         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ void	ft_free_dict(t_dict *dict, int k)
 	else
 	{
 		while (k-- >= 0)
-			free(dict[k--].value);
+			free(dict[k].value);
 		free(dict);
 	}
 }

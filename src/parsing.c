@@ -6,7 +6,7 @@
 /*   By: lomajeru <lomajeru@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/23 14:32:17 by lomajeru          #+#    #+#             */
-/*   Updated: 2023/09/24 18:18:22 by lomajeru         ###   ########.fr       */
+/*   Updated: 2023/09/24 18:59:45 by lomajeru         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,10 +83,10 @@ t_dict	*fill_dict(char *buff, int i, int k)
 			return (ft_free_dict(dict, k), ft_error(buff), NULL);
 		while (buff[i] && buff[i] != '\n')
 			i++;
+		while (buff[i] == '\n')
+			i++;
 		k++;
 	}
-	dict[k].value = ft_strdup("\0");
-	dict[k].nb = -1;
 	return (dict);
 }
 

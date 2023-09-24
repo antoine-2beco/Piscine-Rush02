@@ -6,11 +6,19 @@
 /*   By: lomajeru <lomajeru@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/23 14:05:02 by lomajeru          #+#    #+#             */
-/*   Updated: 2023/09/24 17:58:17 by lomajeru         ###   ########.fr       */
+/*   Updated: 2023/09/24 19:01:24 by lomajeru         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "rush.h"
+
+void	ft_putstr(char *str)
+{
+	if (!str)
+		return ;
+	while (*str)
+		write(1, str++, 1);
+}
 
 int	ft_atoi_rush(char *str)
 {

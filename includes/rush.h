@@ -6,7 +6,7 @@
 /*   By: lomajeru <lomajeru@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/23 13:47:05 by lomajeru          #+#    #+#             */
-/*   Updated: 2023/09/24 18:17:50 by lomajeru         ###   ########.fr       */
+/*   Updated: 2023/09/24 19:27:11 by lomajeru         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,12 +22,8 @@ typedef struct s_dict
 {
 	int		nb;
 	char	*value;
-	char	*num;
-	int		index;
 	int		len;
 }	t_dict;
-
-//rush02.c
 
 //parsing.c
 int					nb_lines(char *buff);
@@ -44,15 +40,15 @@ char				*ft_strdup(char *src);
 void				ft_putchar(char c);
 int					ft_power(int nb, int power);
 long long			ft_atoi_check(char *str);
+void				ft_putstr(char *str);
+
 
 //ft_error.c
 int					ft_error(char *buff);
 void				ft_free_dict(t_dict *dict, int k);
 
 // convert_num.c
-int					num_spell(char *num, t_dict *dict);
-void				init_temp(int *temp);
-void				convert_num(int *num, t_dict *dict);
-void				print_num(int num, t_dict *dict);
+void				ft_print_nbr(long long nbr, t_dict *dict);
+void				ft_print_multiple(long long nbr, t_dict *dict);
 
 #endif
